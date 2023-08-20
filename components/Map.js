@@ -46,7 +46,7 @@ export default function Map(props) {
 
 const styles = StyleSheet.create({
   container: {
-    height: "80%",
+    height: "70%",
     top: 0,
     width: "100%",
     backgroundColor: "tomato"

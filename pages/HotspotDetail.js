@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import NetInfo from '@react-native-community/netinfo';
 import { useDarkMode } from '../providers/DarkModeContext';
 import Map from '../components/Map';
-import ToggleHotspot from '../components/ToggleHotspot';
+import LocalHotspotOptions from '../components/LocalHotspotOptions';
 
 function HotspotDetail({ route }) {
-  const { coordinate, name, subtitle } = route.params.item;
+  const item = route.params.item;
+  const { coordinate, name, subtitle } = item;
   const [isConnected, setIsConnected] = useState(true);
   const { isDarkMode } = useDarkMode();
 
@@ -54,7 +55,7 @@ function HotspotDetail({ route }) {
       }
       <Text style={styles.title}>{name}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
-      <ToggleHotspot itemName={name}/>
+      <LocalHotspotOptions item={item}/>
     </View>
   );
 }
