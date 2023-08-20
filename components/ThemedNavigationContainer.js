@@ -25,6 +25,7 @@ export default function ThemedNavigationContainer() {
           options={{ title: 'Detail', tabBarVisible: false, gestureEnabled: true, animationEnabled: true}}
         />
       </Stack.Navigator>
+      <StatusBar style={isDarkMode ? 'light' : 'dark'} />
     </NavigationContainer>
   );
 }

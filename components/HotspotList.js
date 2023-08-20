@@ -2,15 +2,32 @@ import HotspotItem from './HotspotItem'
 
 const list = [
   {
-    name: 'Amy Farha',
-    avatar_url: 'https://randomuser.me/api/portraits/men/36.jpg',
-    subtitle: 'Vice President'
+    name: 'De Waag',
+    avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipN-OUPVXb2sKrnoa_H2L3rC67olsMRUWz6eeD4T=w203-h270-k-no',
+    subtitle: 'museum',
+    coordinate: {
+      latitude: 52.012803467406314,
+      longitude: 4.710881652459761
+    }
   },
   {
-    name: 'Chris Jackson',
-    avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-    subtitle: 'Vice Chairman'
+    name: 'Stadhuis van Gouda',
+    avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipNOdWIi1FF0nQ4ICjVsANrswcszxpeY0yhEfWk=w203-h270-k-no',
+    subtitle: 'stadhuis van Gouda',
+    coordinate: {
+      latitude: 52.01174,
+      longitude: 4.71050
+    }
   },
+  {
+    name: 'Sint-Janskerk',
+    avatar_url: 'https://lh5.googleusercontent.com/p/AF1QipMA9yt5pMQ_58npB9Fq3vRno5m7u0h_WznZP6mz=w203-h134-k-no',
+    subtitle: 'kerk',
+    coordinate: {
+      latitude: 52.01103824979288,
+      longitude: 4.710743708757333
+    }
+  }
 ]
 
 // Add ability to add rating

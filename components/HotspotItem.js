@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function HotspotItem(props) {
   const { isDarkMode } = useDarkMode();
   const navigation = useNavigation();
-  const { item, i } = props
+  const { item, i: index } = props
 
   const styles = StyleSheet.create({
     text: {
@@ -24,7 +24,7 @@ export default function HotspotItem(props) {
   };
 
   return (
-    <ListItem key={i} bottomDivider containerStyle={styles.container} onPress={navigateToDetail}>
+    <ListItem key={index} bottomDivider containerStyle={styles.container} onPress={navigateToDetail}>
       <Avatar rounded source={{uri: item.avatar_url}} />
       <ListItem.Content>
         <ListItem.Title style={styles.text}>{item.name}</ListItem.Title>
