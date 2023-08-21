@@ -23,6 +23,7 @@ export default function LocalHotspotOptions(props) {
   }, []);
 
 
+  // Fetch the data from the file system
   async function getHotspots() {
     const hotspotJSON = await FileSystem.readAsStringAsync(FileSystem.documentDirectory + 'hotspots.json')
     const hotspots = JSON.parse(hotspotJSON)
@@ -32,6 +33,7 @@ export default function LocalHotspotOptions(props) {
     return hotspots;
   }
 
+  // Write the data to the file system
   function writeHotspots(msg) {
     FileSystem.writeAsStringAsync(FileSystem.documentDirectory + 'hotspots.json', JSON.stringify(list))
       .then(() => {
@@ -42,6 +44,7 @@ export default function LocalHotspotOptions(props) {
       });
   }
 
+  // Remove the hotspot from the list
   function removeHotspot() {
     const newList = list
     newList.splice(index, 1)
@@ -50,6 +53,7 @@ export default function LocalHotspotOptions(props) {
     writeHotspots('Hotspot removed!')
   }
 
+  // Add the hotspot to the list
   async function addHotspot() {
     const newList = list
     newList.push(item)
@@ -70,6 +74,7 @@ export default function LocalHotspotOptions(props) {
     }
   }
 
+  // If the hotspot is already in the list, show the remove button
   if (index !== -1) {
     return (
       <>

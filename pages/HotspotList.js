@@ -1,9 +1,10 @@
-import HotspotItem from './HotspotItem'
 import { useState, useEffect } from 'react'
+import HotspotItem from '../components/HotspotItem'
 
 export default function HotspotList() {
   const [ list, setList ] = useState([])
 
+  // Fetch the data from the JSON file
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/koen-benne/GoudseGeschiedenis/main/data.json')
       .then(response => response.json())

@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
+// This is the context that is used to share the dark mode state
+
 const DarkModeContext = createContext();
 
 export const useDarkMode = () => {

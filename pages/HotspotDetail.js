@@ -12,6 +12,7 @@ function HotspotDetail({ route }) {
   const [isConnected, setIsConnected] = useState(true);
   const { isDarkMode } = useDarkMode();
 
+  // Check for internet connection
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected);

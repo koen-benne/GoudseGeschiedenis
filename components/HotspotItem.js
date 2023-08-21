@@ -3,7 +3,6 @@ import { ListItem, Avatar } from '@rneui/themed'
 import { useDarkMode } from '../providers/DarkModeContext';
 import { useNavigation } from '@react-navigation/native';
 
-// Create list item component and add dark mode styles to it
 export default function HotspotItem(props) {
   const { isDarkMode } = useDarkMode();
   const navigation = useNavigation();
@@ -19,6 +18,7 @@ export default function HotspotItem(props) {
     },
   });
 
+  // Function for navigating to the detail page
   const navigateToDetail = () => {
     navigation.navigate('HotspotDetail', { item });
   };

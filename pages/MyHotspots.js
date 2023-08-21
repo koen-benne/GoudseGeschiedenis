@@ -5,6 +5,9 @@ import { Text } from 'react-native';
 import HotspotItem from '../components/HotspotItem';
 
 export default function MyHotspots() {
+  const [list, setList] = useState([])
+
+  // Fetch the data from the file system
   async function getHotspots() {
     const hotspotJSON = await FileSystem.readAsStringAsync(FileSystem.documentDirectory + 'hotspots.json')
     const hotspots = JSON.parse(hotspotJSON)
@@ -13,8 +16,6 @@ export default function MyHotspots() {
     }
     return hotspots;
   }
-
-  const [list, setList] = useState([])
 
   useFocusEffect(() => {
     getHotspots().then((hotspots) => {

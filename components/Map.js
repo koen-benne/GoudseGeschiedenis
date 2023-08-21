@@ -7,6 +7,7 @@ export default function Map(props) {
   const { name, subtitle, coordinate } = props;
   const [currentLocation, setCurrentLocation] = useState(null);
 
+  // Get the current location
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -20,6 +21,7 @@ export default function Map(props) {
     })();
   }, []);
 
+  // Set the initial region
   const initialRegion = {
     ...coordinate,
     latitudeDelta: 0.003,

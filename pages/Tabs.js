@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import FindHotspots from './FindHotspots';
+import HotspotList from './HotspotList';
 import MyHotspots from './MyHotspots';
 import Settings from './Settings';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -11,7 +11,7 @@ export default function Tabs(props) {
     <Tab.Navigator>
       <Tab.Screen
         name="Find"
-        component={FindHotspots}
+        component={HotspotList}
         options={{
           tabBarIcon:({color, size}) => (
             <Ionicons name="search" color={color} size={size} />

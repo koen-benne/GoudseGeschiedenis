@@ -1,6 +1,7 @@
 import { StyleSheet, Switch, Text, View } from 'react-native';
 import { useDarkMode } from '../providers/DarkModeContext';
 
+// Settings page, which allows the user to toggle dark mode
 export default function Settings() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 

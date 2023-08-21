@@ -7,6 +7,7 @@ import { useDarkMode } from '../providers/DarkModeContext';
 import HotspotDetail from '../pages/HotspotDetail';
 import { createStackNavigator } from '@react-navigation/stack';
 
+// This component is used to wrap the entire app in a NavigationContainer with a theme.
 export default function ThemedNavigationContainer() {
   const { isDarkMode } = useDarkMode();
   const Stack = createStackNavigator();
